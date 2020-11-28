@@ -16,14 +16,15 @@
         <div class="container">
             <div class="navbar-header">
 
-                @Html.ActionLink("Cinemex", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Hospital Express", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar navbar-dark">
                 <nav class="navbar-header">
-                    <a>@Html.ActionLink("Inicio", "Index", "Home", new { @class = "navbar-brand" })</a>
-                    <a>@Html.ActionLink("Contacto", "Contact", "Home", new { @class = "navbar-brand" })</a>
-                    <a>@Html.ActionLink("Acerca ", "About", "Home", new { @class = "navbar-brand" })</a>
-                    @Html.Partial("_LoginPartial", new { @class = "navbar - brand" })
+                    <a>@Html.ActionLink("Inicio", "Index", "Home", new { @class = "navbar-brand     btn btn-outline-primary text-light" })</a>
+                    <a>@Html.ActionLink("Contacto", "Contact", "Home", new { @class = "navbar-brand btn btn-outline-primary text-light" })</a>
+                    <a>@Html.ActionLink("Acerca ", "About", "Home", new { @class = "navbar-brand    btn btn-outline-primary text-light" })</a>
+
+                    @Html.Partial("_LoginPartial")
                 </nav>
                 
             </div>
