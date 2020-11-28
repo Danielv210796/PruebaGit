@@ -22,7 +22,7 @@
     <IISExpressSSLPort>44340</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
     <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
-    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
