@@ -22,7 +22,8 @@
     <IISExpressSSLPort>44340</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
     <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
-    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <IISExpressUseClassicPipelineMode>
+    </IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -175,6 +176,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011280443433_InitialCreate.cs" />
+    <Compile Include="Migrations\202011280443433_InitialCreate.Designer.cs">
+      <DependentUpon>202011280443433_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011280448561_start.cs" />
+    <Compile Include="Migrations\202011280448561_start.Designer.cs">
+      <DependentUpon>202011280448561_start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Empleados.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -355,6 +365,14 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202011280443433_InitialCreate.resx">
+      <DependentUpon>202011280443433_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011280448561_start.resx">
+      <DependentUpon>202011280448561_start.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
