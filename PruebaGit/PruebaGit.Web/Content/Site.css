@@ -1,12 +1,5 @@
 ﻿body {
     margin: 0px;
     padding: 0px;
-    background-image: url(https://pixabay.com/photos/doctors-hospital-people-health-2607295/);
-}
-
-container {
-    background-image: url(https://pixabay.com/photos/doctors-hospital-people-health-2607295/)
-}
-.card-header{
-    background-color: gra
+  background-color:black;
 }
