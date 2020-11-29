@@ -8,6 +8,9 @@
     @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/Site.css")
     @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="preconecte" href="https: //fonts.gstatic.com">
+    <link href="https: //fonts.googleapis.com/css2? familia,Josefin+Slab:ital,wght@1,500&display-swap" rel="hoja de estilo">
 
 </head>
 <body>
@@ -15,21 +18,22 @@
     <div class="navbar navbar-dark">
         <div class="container">
             <div class="navbar-header">
-
                 @Html.ActionLink("Hospital Express", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar navbar-dark">
-                <nav class="navbar-header">
+                <nav class="navbar-header">       
                     <a>@Html.ActionLink("Inicio", "Index", "Home", new { @class = "navbar-brand     btn btn-outline-primary text-light" })</a>
                     <a>@Html.ActionLink("Contacto", "Contact", "Home", new { @class = "navbar-brand btn btn-outline-primary text-light" })</a>
                     <a>@Html.ActionLink("Acerca ", "About", "Home", new { @class = "navbar-brand    btn btn-outline-primary text-light" })</a>
-
-                    @Html.Partial("_LoginPartial")
                 </nav>
-                
+         @* PARA AJUSTARLO CON LAS PAGINAS PRINCIPALES *@
+                <div class="navbar navbar-dark">              
+                    <a> @Html.Partial("_LoginPartial", new { @class = "navbar-brand    btn btn-outline-primary text-light" })</a>
+                    </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
