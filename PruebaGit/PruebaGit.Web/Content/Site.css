@@ -13,9 +13,10 @@ p{
 .letras{
     color:red;
 }
-.card
+card-body
 {
-    color:black;
+ 
+    background-color:black;
 }
  
     .container-fluid {
