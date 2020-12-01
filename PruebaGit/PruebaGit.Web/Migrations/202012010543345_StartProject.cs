@@ -3,10 +3,24 @@ namespace PruebaGit.Web.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class StartProject : DbMigration
     {
         public override void Up()
         {
+            CreateTable(
+                "dbo.patients",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        nombre = c.String(),
+                        apellido_paterno = c.String(),
+                        apellido_materno = c.String(),
+                        fecha = c.String(),
+                        genero = c.String(),
+                        telefono = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
             CreateTable(
                 "dbo.AspNetRoles",
                 c => new
@@ -94,6 +108,7 @@ namespace PruebaGit.Web.Migrations
             DropTable("dbo.AspNetUsers");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
+            DropTable("dbo.patients");
         }
     }
 }

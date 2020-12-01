@@ -171,35 +171,20 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\accountController.cs" />
-    <Compile Include="Controllers\genresController.cs" />
     <Compile Include="Controllers\homeController.cs" />
     <Compile Include="Controllers\manageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202011280443433_InitialCreate.cs" />
-    <Compile Include="Migrations\202011280443433_InitialCreate.Designer.cs">
-      <DependentUpon>202011280443433_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011280448561_start.cs" />
-    <Compile Include="Migrations\202011280448561_start.Designer.cs">
-      <DependentUpon>202011280448561_start.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011300518213_StartProyect.cs" />
-    <Compile Include="Migrations\202011300518213_StartProyect.Designer.cs">
-      <DependentUpon>202011300518213_StartProyect.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012010444568_StartProject.cs" />
-    <Compile Include="Migrations\202012010444568_StartProject.Designer.cs">
-      <DependentUpon>202012010444568_StartProject.cs</DependentUpon>
+    <Compile Include="Migrations\202012010543345_StartProject.cs" />
+    <Compile Include="Migrations\202012010543345_StartProject.Designer.cs">
+      <DependentUpon>202012010543345_StartProject.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Admin.cs" />
-    <Compile Include="Models\Event.cs" />
-    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\patient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -362,11 +347,6 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <Content Include="Views\Genres\Create.cshtml" />
-    <Content Include="Views\Genres\Delete.cshtml" />
-    <Content Include="Views\Genres\Details.cshtml" />
-    <Content Include="Views\Genres\Edit.cshtml" />
-    <Content Include="Views\Genres\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -383,17 +363,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202011280443433_InitialCreate.resx">
-      <DependentUpon>202011280443433_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011280448561_start.resx">
-      <DependentUpon>202011280448561_start.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011300518213_StartProyect.resx">
-      <DependentUpon>202011300518213_StartProyect.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012010444568_StartProject.resx">
-      <DependentUpon>202012010444568_StartProject.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202012010543345_StartProject.resx">
+      <DependentUpon>202012010543345_StartProject.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

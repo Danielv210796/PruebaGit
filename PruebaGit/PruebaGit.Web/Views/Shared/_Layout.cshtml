@@ -25,12 +25,13 @@
                     <a>@Html.ActionLink("Inicio", "Index", "Home", new { @class = "navbar-brand     btn btn-outline-primary text-dark" })</a>
                     <a>@Html.ActionLink("Contacto", "Contact", "Home", new { @class = "navbar-brand btn btn-outline-primary text-dark" })</a>
                     <a>@Html.ActionLink("Acerca ", "About", "Home", new { @class = "navbar-brand    btn btn-outline-primary text-dark" })</a>
-                    <a>@Html.ActionLink("Pacientes ", "Index", "Patients", new { @class = "navbar-brand    btn btn-outline-primary text-dark" })</a></nav>
+                   
                 @if (User.Identity.IsAuthenticated)
                 {
                     <a>@Html.ActionLink("Genero ", "Create", "Genres", new { @class = "navbar-brand    btn btn-outline-primary text-dark" })</a>
 
                 }
+                </nav>
 
 
 
@@ -44,8 +45,8 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer class="text-white text-center">
-            <p>&copy; @DateTime.Now.Year - Apliacacion (Nombre a modificar)</p>
+        <footer class="text-white text-xl-center">
+            <p>&copy; @DateTime.Now.Year -Hospital Express</p>
         </footer>
     </div>
 

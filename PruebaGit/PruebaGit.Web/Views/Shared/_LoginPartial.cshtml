@@ -11,10 +11,10 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            @Html.ActionLink("Hola " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { @class = "btn btn-outline-primary text-light" })
+                            @Html.ActionLink("Hola " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { @class = "btn btn-outline-primary text-dark" })
                         </li>
                         <li>
-                            <a href="javascript:document.getElementById('logoutForm').submit()" class="btn btn-outline-primary text-light mt-3">Cerrar sesión</a>
+                            <a href="javascript:document.getElementById('logoutForm').submit()" class="btn btn-outline-primary text-dark mt-3">Cerrar sesión</a>
                         </li>
                     </ul>
                 }
