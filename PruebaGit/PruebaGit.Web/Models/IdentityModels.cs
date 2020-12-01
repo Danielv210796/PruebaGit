@@ -32,6 +32,9 @@ namespace PruebaGit.Web.Models
         //AGREGAR TODAS LAS TABLAS
         //tablas con las que vamos a trabajar
         public DbSet<Genre> Genres { get; set; }
-        public DbSet<Event> Events{ get; set; }
+        public DbSet<Event> Events { get; set; }
+        public DbSet<Event> patient{ get; set; }
+
+        public System.Data.Entity.DbSet<PruebaGit.Web.Models.patient> patients { get; set; }
     }
 }
