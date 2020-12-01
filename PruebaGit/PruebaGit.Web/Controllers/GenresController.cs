@@ -10,7 +10,7 @@ using PruebaGit.Web.Models;
 
 namespace PruebaGit.Web.Controllers
 {
-    public class GenresController : Controller
+    public class genresController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
