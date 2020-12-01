@@ -13,16 +13,16 @@ using PruebaGit.Web.Models;
 namespace PruebaGit.Web.Controllers
 {
     [Authorize]
-    public class AccountController : Controller
+    public class accountController : Controller
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
-        public AccountController()
+        public accountController()
         {
         }
 
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
+        public accountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
         {
             UserManager = userManager;
             SignInManager = signInManager;

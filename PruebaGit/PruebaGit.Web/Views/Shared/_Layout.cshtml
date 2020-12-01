@@ -25,7 +25,7 @@
                     <a>@Html.ActionLink("Inicio", "Index", "Home", new { @class = "navbar-brand     btn btn-outline-primary text-dark" })</a>
                     <a>@Html.ActionLink("Contacto", "Contact", "Home", new { @class = "navbar-brand btn btn-outline-primary text-dark" })</a>
                     <a>@Html.ActionLink("Acerca ", "About", "Home", new { @class = "navbar-brand    btn btn-outline-primary text-dark" })</a>
-                </nav>
+                    <a>@Html.ActionLink("Pacientes ", "Index", "Patients", new { @class = "navbar-brand    btn btn-outline-primary text-dark" })</a></nav>
                 @if (User.Identity.IsAuthenticated)
                 {
                     <a>@Html.ActionLink("Genero ", "Create", "Genres", new { @class = "navbar-brand    btn btn-outline-primary text-dark" })</a>
