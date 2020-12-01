@@ -1,9 +1,9 @@
 ﻿body {
     margin: 0px;
     padding: 0px;
-    background-color: black;
-    color: white;
     font-family: 'Josefin Slab', serif;
+    color:black;
+    
 }
 p{
     color:black;
@@ -13,13 +13,3 @@ p{
 .letras{
     color:red;
 }
-card-body
-{
- 
-    background-color:black;
-}
- 
-    .container-fluid {
-        margin-left: 0%;
-        margin-right: 0%;
-    }

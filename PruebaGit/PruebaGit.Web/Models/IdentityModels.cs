@@ -29,5 +29,9 @@ namespace PruebaGit.Web.Models
         {
             return new ApplicationDbContext();
         }
+        //AGREGAR TODAS LAS TABLAS
+        //tablas con las que vamos a trabajar
+        public DbSet<Genre> Genres { get; set; }
+        public DbSet<Event> Events{ get; set; }
     }
 }

@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
     @Styles.Render("~/Content/css")
-    @Styles.Render("~/Content/Site.css")
     @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/Site.css")
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="preconecte" href="https: //fonts.gstatic.com">
     <link href="https: //fonts.googleapis.com/css2? familia,Josefin+Slab:ital,wght@1,500&display-swap" rel="hoja de estilo">
@@ -21,16 +21,23 @@
                 @Html.ActionLink("Hospital Express", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar navbar-dark">
-                <nav class="navbar-header">       
-                    <a>@Html.ActionLink("Inicio", "Index", "Home", new { @class = "navbar-brand     btn btn-outline-primary text-light" })</a>
-                    <a>@Html.ActionLink("Contacto", "Contact", "Home", new { @class = "navbar-brand btn btn-outline-primary text-light" })</a>
-                    <a>@Html.ActionLink("Acerca ", "About", "Home", new { @class = "navbar-brand    btn btn-outline-primary text-light" })</a>
+                <nav class="navbar-header">
+                    <a>@Html.ActionLink("Inicio", "Index", "Home", new { @class = "navbar-brand     btn btn-outline-primary text-dark" })</a>
+                    <a>@Html.ActionLink("Contacto", "Contact", "Home", new { @class = "navbar-brand btn btn-outline-primary text-dark" })</a>
+                    <a>@Html.ActionLink("Acerca ", "About", "Home", new { @class = "navbar-brand    btn btn-outline-primary text-dark" })</a>
                 </nav>
-         @* PARA AJUSTARLO CON LAS PAGINAS PRINCIPALES *@
-                <div class="navbar navbar-dark">              
-                    <a> @Html.Partial("_LoginPartial", new { @class = "navbar-brand    btn btn-outline-primary text-light" })</a>
-                    </div>
-                    </div>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a>@Html.ActionLink("Genero ", "Create", "Genres", new { @class = "navbar-brand    btn btn-outline-primary text-dark" })</a>
+
+                }
+
+
+
+                <div class="navbar navbar-dark">
+                    <a> @Html.Partial("_LoginPartial", new { @class = "navbar-brand    btn btn-outline-primary text-dark" })</a>
+                </div>
+            </div>
                 </div>
             </div>
 
