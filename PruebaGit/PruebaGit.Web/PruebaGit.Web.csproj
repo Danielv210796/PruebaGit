@@ -174,7 +174,6 @@
     <Compile Include="Controllers\genresController.cs" />
     <Compile Include="Controllers\homeController.cs" />
     <Compile Include="Controllers\manageController.cs" />
-    <Compile Include="Controllers\patientController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -201,10 +200,8 @@
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\patient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="Views\patient\patientsController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />
@@ -370,11 +367,6 @@
     <Content Include="Views\Genres\Details.cshtml" />
     <Content Include="Views\Genres\Edit.cshtml" />
     <Content Include="Views\Genres\Index.cshtml" />
-    <Content Include="Views\Patients\Create.cshtml" />
-    <Content Include="Views\Patients\Delete.cshtml" />
-    <Content Include="Views\Patients\Details.cshtml" />
-    <Content Include="Views\Patients\Edit.cshtml" />
-    <Content Include="Views\Patients\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
