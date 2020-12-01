@@ -31,6 +31,16 @@ namespace PruebaGit.Web.Models
         }
         //AGREGAR TODAS LAS TABLAS
         //tablas con las que vamos a trabajar
-         public DbSet<patient> patients { get; set; }
-         }
+        //------------------TABLA DE ADMINISTRADOR QUE VA REGISTRAR LOS EMPLEADOS--------------//
+
+        public DbSet<Administrador> Administradors { get; set; }
+        public DbSet<Trabajador> Trabajadors { get; set; }
+
+
+
+        //--------------------------TABLA DE LOS PACIENTES QUE REGISTRARA EL MEDICO---------------------------//
+
+
+
+    }
 }

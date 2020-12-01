@@ -3,21 +3,31 @@ namespace PruebaGit.Web.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class StartProject : DbMigration
+    public partial class StarProyect : DbMigration
     {
         public override void Up()
         {
             CreateTable(
-                "dbo.patients",
+                "dbo.Administradors",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        nombre = c.String(),
-                        apellido_paterno = c.String(),
-                        apellido_materno = c.String(),
-                        fecha = c.String(),
-                        genero = c.String(),
-                        telefono = c.String(),
+                        Id_Usuario = c.String(),
+                        Nombre = c.String(),
+                        APM = c.String(),
+                        APP = c.String(),
+                        TrabajadorId = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Trabajadors", t => t.TrabajadorId, cascadeDelete: true)
+                .Index(t => t.TrabajadorId);
+            
+            CreateTable(
+                "dbo.Trabajadors",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Nombre = c.String(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -97,18 +107,21 @@ namespace PruebaGit.Web.Migrations
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
+            DropForeignKey("dbo.Administradors", "TrabajadorId", "dbo.Trabajadors");
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
+            DropIndex("dbo.Administradors", new[] { "TrabajadorId" });
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");
             DropTable("dbo.AspNetUsers");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
-            DropTable("dbo.patients");
+            DropTable("dbo.Trabajadors");
+            DropTable("dbo.Administradors");
         }
     }
 }

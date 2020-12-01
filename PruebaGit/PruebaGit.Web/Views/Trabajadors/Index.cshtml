@@ -1,0 +1,58 @@
+﻿@model IEnumerable<PruebaGit.Web.Models.Trabajador>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<p class="mt-3">
+    <a href="@Url.Action("Create", "Trabajadors")" class="btn btn-primary text-dark"><i class="fas fa-plus"></i>Trabajadores</a> 
+</p>
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-md-12">
+            <div class="card bg-white btn btn-outline-dark">
+                <div class="card-body bg-transparent">
+                    <div class="text-dark text-center"><h3>Lista de trabajadores</h3></div>
+
+                    <table class="table">
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Nombre)
+                            </th>
+                            <th></th>
+                        </tr>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Nombre)
+                                </td>
+                                <td>
+
+
+
+
+
+                                    @*//METODO FALLIDO*@
+                                    <a herf="@Url.Action("Edit", "Edit", new { id = item.Id })"><i class="fas fa-edit"></i></a>
+                                    <a herf="@Url.Action("Details", "Details", new { id = item.Id })"> <i class="fas fa-edit"></i></a>
+                                    <a herf="@Url.Action("Delete", "Delete", new { id = item.Id })">  <i class="fas fa-edit"></i></a>
+
+
+
+
+
+                                </td>
+                            </tr>
+
+                        }
+
+                    </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+              
+
