@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
     @Styles.Render("~/Content/css")
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     @Scripts.Render("~/bundles/modernizr")
     @Styles.Render("~/Content/Site.css")
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="preconecte" href="https: //fonts.gstatic.com">
     <link href="https: //fonts.googleapis.com/css2? familia,Josefin+Slab:ital,wght@1,500&display-swap" rel="hoja de estilo">
 
@@ -26,15 +26,10 @@
                     <a>@Html.ActionLink("Contacto", "Contact", "Home", new { @class = "navbar-brand btn btn-outline-primary text-dark" })</a>
                     <a>@Html.ActionLink("Acerca ", "About", "Home", new { @class = "navbar-brand    btn btn-outline-primary text-dark" })</a>
 
-
-
-
-
                     @if (User.Identity.IsAuthenticated)
                     {
-
-                        <a>@Html.ActionLink("Emplys", "Index", "Trabajadors", new { @class = "navbar-brand btn btn-outline-primary text-dark" })</a>
-
+                        //PENDIENTE
+                      <a herf="@Url.Action("Index","Trabajadors")"class = "navbar-brand  btn btn-outline-primary text-dark">Empleados</a>
                     }
                 </nav>
 
@@ -43,9 +38,10 @@
                 <div class="navbar navbar-dark">
                     <a> @Html.Partial("_LoginPartial", new { @class = "navbar-brand    btn btn-outline-primary text-dark" })</a>
                 </div>
-            </div>
                 </div>
             </div>
+        </div>
+       
 
     <div class="container body-content">
         @RenderBody()

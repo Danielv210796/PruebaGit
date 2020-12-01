@@ -28,7 +28,8 @@ namespace PruebaGit.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Trabajador trabajador = db.Trabajadors.Find(id);
+            //busca a los trabajadores y va mostrar a todos
+            Trabajador trabajador = db.Trabajadors.Include(a => a.Administradors).Where(a => a.Id == id).SingleOrDefault();
             if (trabajador == null)
             {
                 return HttpNotFound();

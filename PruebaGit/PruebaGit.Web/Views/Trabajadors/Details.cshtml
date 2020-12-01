@@ -4,11 +4,10 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>Trabajador</h4>
-    <hr />
+
+<div class="row justify-content-center">
+
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Nombre)
@@ -20,7 +19,38 @@
 
     </dl>
 </div>
+<div class="col-md-12">
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th> Usuario</th>
+                <th> Nombre </th>
+                <th> Apellido Materno </th>
+                <th> Apellido Paterno </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Administradors)
+            {
+            <tr>
+                <th>@item.Id_Usuario</th>
+                <th>@item.Nombre</th>
+                <th>@item.APM</th>
+                <th>@item.APP</th>
+
+            </tr>
+
+        }
+            </tbody>
+
+
+        </table>
+   
+
+</div>
 <p>
+
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
