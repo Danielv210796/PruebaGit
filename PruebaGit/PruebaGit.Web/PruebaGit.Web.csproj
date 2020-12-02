@@ -173,6 +173,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\accountController.cs" />
+    <Compile Include="Controllers\AdministradorsController.cs" />
     <Compile Include="Controllers\homeController.cs" />
     <Compile Include="Controllers\manageController.cs" />
     <Compile Include="Controllers\TrabajadorsController.cs" />

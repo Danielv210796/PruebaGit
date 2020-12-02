@@ -22,16 +22,17 @@
             </div>
             <div class="navbar navbar-dark">
                 <nav class="navbar-header">
-                    <a>@Html.ActionLink("Inicio", "Index", "Home", new { @class = "navbar-brand     btn btn-outline-primary text-dark" })</a>
-                    <a>@Html.ActionLink("Contacto", "Contact", "Home", new { @class = "navbar-brand btn btn-outline-primary text-dark" })</a>
-                    <a>@Html.ActionLink("Acerca ", "About", "Home", new { @class = "navbar-brand    btn btn-outline-primary text-dark" })</a>
+                    @Html.ActionLink("Inicio", "Index", "Home", new { @class = "navbar-brand     btn btn-outline-primary text-dark" })
+                    @Html.ActionLink("Contacto", "Contact", "Home", new { @class = "navbar-brand btn btn-outline-primary text-dark" })
+                    @Html.ActionLink("Acerca ", "About", "Home", new { @class = "navbar-brand    btn btn-outline-primary text-dark" })
 
                     @if (User.Identity.IsAuthenticated)
+
                     {
-                        //PENDIENTE
-                      <a herf="@Url.Action("Index","Trabajadors")"class = "navbar-brand  btn btn-outline-primary text-dark">Empleados</a>
-                    }
-                </nav>
+                        <a href="@Url.Action("Index","Trabajadors")" class="navbar-brand btn btn-outline-primary text-dark">Empleados</a>
+                        <a href="@Url.Action("Index","Administradors")" class="navbar-brand btn btn-outline-primary text-dark">Administrador</a>
+                     }
+                    </nav>
 
 
 
