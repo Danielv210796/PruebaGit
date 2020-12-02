@@ -174,8 +174,10 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\accountController.cs" />
     <Compile Include="Controllers\AdministradorsController.cs" />
+    <Compile Include="Controllers\DoctorsController.cs" />
     <Compile Include="Controllers\homeController.cs" />
     <Compile Include="Controllers\manageController.cs" />
+    <Compile Include="Controllers\PacientesController.cs" />
     <Compile Include="Controllers\TrabajadorsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -188,11 +190,17 @@
     <Compile Include="Migrations\202012010730398_StartAdmin.Designer.cs">
       <DependentUpon>202012010730398_StartAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012020851173_StartPac.cs" />
+    <Compile Include="Migrations\202012020851173_StartPac.Designer.cs">
+      <DependentUpon>202012020851173_StartPac.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Administrador.cs" />
+    <Compile Include="Models\Doctor.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Paciente.cs" />
     <Compile Include="Models\Trabajador.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -387,6 +395,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012010730398_StartAdmin.resx">
       <DependentUpon>202012010730398_StartAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012020851173_StartPac.resx">
+      <DependentUpon>202012020851173_StartPac.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -37,9 +37,13 @@ namespace PruebaGit.Web.Models
         public DbSet<Trabajador> Trabajadors { get; set; }
 
 
-
         //--------------------------TABLA DE LOS PACIENTES QUE REGISTRARA EL MEDICO---------------------------//
+        public DbSet<Paciente> Pacientes { get; set; }
+        public DbSet<Doctor> Doctors { get; set; }
 
+        //--------------------------TABLA DEL HOSPITAL--------------------------//
+
+        //--------------------------TABLA DEL LOS INGRESOS Y EGRESOS DE LOS PACIENTES--------------------------//
 
 
     }

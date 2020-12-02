@@ -10,109 +10,112 @@ using PruebaGit.Web.Models;
 
 namespace PruebaGit.Web.Controllers
 {
-    [Authorize]
-    public class TrabajadorsController : Controller
+    public class PacientesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Trabajadors
+        // GET: Pacientes
         public ActionResult Index()
         {
-            return View(db.Trabajadors.ToList());
+            var pacientes = db.Pacientes.Include(p => p.Doctor);
+            return View(pacientes.ToList());
         }
 
-        // GET: Trabajadors/Details/5
+        // GET: Pacientes/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //busca a los trabajadores y va mostrar a todos
-            Trabajador trabajador = db.Trabajadors.Include(a => a.Administradors).Where(a => a.Id == id).SingleOrDefault();
-            if (trabajador == null)
+            Paciente paciente = db.Pacientes.Find(id);
+            if (paciente == null)
             {
                 return HttpNotFound();
             }
-            return View(trabajador);
+            return View(paciente);
         }
 
-        // GET: Trabajadors/Create
+        // GET: Pacientes/Create
         public ActionResult Create()
         {
+            ViewBag.DoctorId = new SelectList(db.Doctors, "Id", "Nombre");
             return View();
         }
 
-        // POST: Trabajadors/Create
+        // POST: Pacientes/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Trabajador trabajador)
+        public ActionResult Create([Bind(Include = "Id,Id_Paciente,Nombre,AM,AP,DateTime,Genero,Numero,Enfermedad,DoctorId")] Paciente paciente)
         {
             if (ModelState.IsValid)
             {
-                db.Trabajadors.Add(trabajador);
+                db.Pacientes.Add(paciente);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(trabajador);
+            ViewBag.DoctorId = new SelectList(db.Doctors, "Id", "Nombre", paciente.DoctorId);
+            return View(paciente);
         }
 
-        // GET: Trabajadors/Edit/5
+        // GET: Pacientes/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Trabajador trabajador = db.Trabajadors.Find(id);
-            if (trabajador == null)
+            Paciente paciente = db.Pacientes.Find(id);
+            if (paciente == null)
             {
                 return HttpNotFound();
             }
-            return View(trabajador);
+            ViewBag.DoctorId = new SelectList(db.Doctors, "Id", "Nombre", paciente.DoctorId);
+            return View(paciente);
         }
 
-        // POST: Trabajadors/Edit/5
+        // POST: Pacientes/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Nombre")] Trabajador trabajador)
+        public ActionResult Edit([Bind(Include = "Id,Id_Paciente,Nombre,AM,AP,DateTime,Genero,Numero,Enfermedad,DoctorId")] Paciente paciente)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(trabajador).State = EntityState.Modified;
+                db.Entry(paciente).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(trabajador);
+            ViewBag.DoctorId = new SelectList(db.Doctors, "Id", "Nombre", paciente.DoctorId);
+            return View(paciente);
         }
 
-        // GET: Trabajadors/Delete/5
+        // GET: Pacientes/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Trabajador trabajador = db.Trabajadors.Find(id);
-            if (trabajador == null)
+            Paciente paciente = db.Pacientes.Find(id);
+            if (paciente == null)
             {
                 return HttpNotFound();
             }
-            return View(trabajador);
+            return View(paciente);
         }
 
-        // POST: Trabajadors/Delete/5
+        // POST: Pacientes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Trabajador trabajador = db.Trabajadors.Find(id);
-            db.Trabajadors.Remove(trabajador);
+            Paciente paciente = db.Pacientes.Find(id);
+            db.Pacientes.Remove(paciente);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

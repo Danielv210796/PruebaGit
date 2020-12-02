@@ -10,109 +10,108 @@ using PruebaGit.Web.Models;
 
 namespace PruebaGit.Web.Controllers
 {
-    [Authorize]
-    public class TrabajadorsController : Controller
+    public class DoctorsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Trabajadors
+        // GET: Doctors
         public ActionResult Index()
         {
-            return View(db.Trabajadors.ToList());
+            return View(db.Doctors.ToList());
         }
 
-        // GET: Trabajadors/Details/5
+        // GET: Doctors/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //busca a los trabajadores y va mostrar a todos
-            Trabajador trabajador = db.Trabajadors.Include(a => a.Administradors).Where(a => a.Id == id).SingleOrDefault();
-            if (trabajador == null)
+            //Doctor doctor = db.Doctors.Include(a => a.Pacientes).Where(a => a.Id == id).SingleOrDefault();
+            Doctor doctor = db.Doctors.Find(id);
+            if (doctor == null)
             {
                 return HttpNotFound();
             }
-            return View(trabajador);
+            return View(doctor);
         }
 
-        // GET: Trabajadors/Create
+        // GET: Doctors/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Trabajadors/Create
+        // POST: Doctors/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Trabajador trabajador)
+        public ActionResult Create(Doctor doctor)
         {
             if (ModelState.IsValid)
             {
-                db.Trabajadors.Add(trabajador);
+                db.Doctors.Add(doctor);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(trabajador);
+            return View(doctor);
         }
 
-        // GET: Trabajadors/Edit/5
+        // GET: Doctors/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Trabajador trabajador = db.Trabajadors.Find(id);
-            if (trabajador == null)
+            Doctor doctor = db.Doctors.Find(id);
+            if (doctor == null)
             {
                 return HttpNotFound();
             }
-            return View(trabajador);
+            return View(doctor);
         }
 
-        // POST: Trabajadors/Edit/5
+        // POST: Doctors/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Nombre")] Trabajador trabajador)
+        public ActionResult Edit([Bind(Include = "Id,Nombre")] Doctor doctor)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(trabajador).State = EntityState.Modified;
+                db.Entry(doctor).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(trabajador);
+            return View(doctor);
         }
 
-        // GET: Trabajadors/Delete/5
+        // GET: Doctors/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Trabajador trabajador = db.Trabajadors.Find(id);
-            if (trabajador == null)
+            Doctor doctor = db.Doctors.Find(id);
+            if (doctor == null)
             {
                 return HttpNotFound();
             }
-            return View(trabajador);
+            return View(doctor);
         }
 
-        // POST: Trabajadors/Delete/5
+        // POST: Doctors/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Trabajador trabajador = db.Trabajadors.Find(id);
-            db.Trabajadors.Remove(trabajador);
+            Doctor doctor = db.Doctors.Find(id);
+            db.Doctors.Remove(doctor);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
