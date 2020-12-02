@@ -7,13 +7,13 @@ namespace PruebaGit.Web.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class StartPac : IMigrationMetadata
+    public sealed partial class StartAdmin : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(StartPac));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(StartAdmin));
         
         string IMigrationMetadata.Id
         {
-            get { return "202012020851173_StartPac"; }
+            get { return "202012022239317_StartAdmin"; }
         }
         
         string IMigrationMetadata.Source

@@ -27,8 +27,7 @@ namespace PruebaGit.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //Doctor doctor = db.Doctors.Include(a => a.Pacientes).Where(a => a.Id == id).SingleOrDefault();
-            Doctor doctor = db.Doctors.Find(id);
+            Doctor doctor = db.Doctors.Include(a => a.Pacientes).Where(a => a.Id == id).SingleOrDefault();
             if (doctor == null)
             {
                 return HttpNotFound();
@@ -47,7 +46,7 @@ namespace PruebaGit.Web.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Doctor doctor)
+        public ActionResult Create([Bind(Include = "Id,Nombre_Doctor")] Doctor doctor)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +78,7 @@ namespace PruebaGit.Web.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Nombre")] Doctor doctor)
+        public ActionResult Edit([Bind(Include = "Id,Nombre_Doctor")] Doctor doctor)
         {
             if (ModelState.IsValid)
             {

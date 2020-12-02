@@ -28,8 +28,8 @@ namespace PruebaGit.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Administrador @administrador = db.Administradors.Find(id);
-            if (@administrador == null)
+            Administrador administrador = db.Administradors.Find(id);
+            if (administrador == null)
             {
                 return HttpNotFound();
             }

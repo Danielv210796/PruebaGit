@@ -10,7 +10,6 @@ using PruebaGit.Web.Models;
 
 namespace PruebaGit.Web.Controllers
 {
-    [Authorize]
     public class TrabajadorsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -28,8 +27,8 @@ namespace PruebaGit.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //busca a los trabajadores y va mostrar a todos
             Trabajador trabajador = db.Trabajadors.Include(a => a.Administradors).Where(a => a.Id == id).SingleOrDefault();
+
             if (trabajador == null)
             {
                 return HttpNotFound();
@@ -48,7 +47,7 @@ namespace PruebaGit.Web.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Trabajador trabajador)
+        public ActionResult Create([Bind(Include = "Id,Nombre")] Trabajador trabajador)
         {
             if (ModelState.IsValid)
             {

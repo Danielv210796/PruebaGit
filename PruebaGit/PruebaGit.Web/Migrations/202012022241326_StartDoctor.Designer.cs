@@ -7,13 +7,13 @@ namespace PruebaGit.Web.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class StarProyect : IMigrationMetadata
+    public sealed partial class StartDoctor : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(StarProyect));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(StartDoctor));
         
         string IMigrationMetadata.Id
         {
-            get { return "202012010713145_StarProyect"; }
+            get { return "202012022241326_StartDoctor"; }
         }
         
         string IMigrationMetadata.Source

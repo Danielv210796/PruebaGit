@@ -39,7 +39,7 @@ namespace PruebaGit.Web.Controllers
         // GET: Pacientes/Create
         public ActionResult Create()
         {
-            ViewBag.DoctorId = new SelectList(db.Doctors, "Id", "Nombre");
+            ViewBag.DoctorId = new SelectList(db.Doctors, "Id", "Nombre_Doctor");
             return View();
         }
 
@@ -48,7 +48,7 @@ namespace PruebaGit.Web.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Id_Paciente,Nombre,AM,AP,DateTime,Genero,Numero,Enfermedad,DoctorId")] Paciente paciente)
+        public ActionResult Create([Bind(Include = "Id,No_Paciente,Nombre_Paciente,AM_Paciente,AP_Paciente,Fecha_Nacimiento_Paciente,Genero_Paciente,Numero_Paciente,Enfermedad_Paciente,DoctorId")] Paciente paciente)
         {
             if (ModelState.IsValid)
             {
@@ -57,7 +57,7 @@ namespace PruebaGit.Web.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.DoctorId = new SelectList(db.Doctors, "Id", "Nombre", paciente.DoctorId);
+            ViewBag.DoctorId = new SelectList(db.Doctors, "Id", "Nombre_Doctor", paciente.DoctorId);
             return View(paciente);
         }
 
@@ -73,7 +73,7 @@ namespace PruebaGit.Web.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.DoctorId = new SelectList(db.Doctors, "Id", "Nombre", paciente.DoctorId);
+            ViewBag.DoctorId = new SelectList(db.Doctors, "Id", "Nombre_Doctor", paciente.DoctorId);
             return View(paciente);
         }
 
@@ -82,7 +82,7 @@ namespace PruebaGit.Web.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Id_Paciente,Nombre,AM,AP,DateTime,Genero,Numero,Enfermedad,DoctorId")] Paciente paciente)
+        public ActionResult Edit([Bind(Include = "Id,No_Paciente,Nombre_Paciente,AM_Paciente,AP_Paciente,Fecha_Nacimiento_Paciente,Genero_Paciente,Numero_Paciente,Enfermedad_Paciente,DoctorId")] Paciente paciente)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +90,7 @@ namespace PruebaGit.Web.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.DoctorId = new SelectList(db.Doctors, "Id", "Nombre", paciente.DoctorId);
+            ViewBag.DoctorId = new SelectList(db.Doctors, "Id", "Nombre_Doctor", paciente.DoctorId);
             return View(paciente);
         }
 

@@ -12,36 +12,34 @@ namespace PruebaGit.Web.Models
         public int Id { get; set; }
 
         [Display(Name = "No Paciente")]
-        public int NoPaciente { get; set; }
+        public int No_Paciente { get; set; }
 
         [Display(Name = "Nombre")]
-        public string Nombres { get; set; }
+        public string Nombre_Paciente { get; set; }
 
         [Display(Name = "Apellido Materno")]
-        public string AM { get; set; }
+        public string AM_Paciente { get; set; }
 
         [Display(Name = "Apellido Paterno")]
-        public string AP { get; set; }
+        public string AP_Paciente { get; set; }
 
        [Display(Name = "Fecha de Nacimiento")]
-       public DateTime DateTime { get; set; }
+       public DateTime Fecha_Nacimiento_Paciente { get; set; }
 
         [Display(Name = "Genero")]
-        public string Genero { get; set; }
+        public string Genero_Paciente { get; set; }
 
 
         [Display(Name = "Numero de telefono")]
-        public int Numero { get; set; }
+        public int Numero_Paciente { get; set; }
 
         [Display(Name = "Enfermedad")]
-        public string Enfermedad { get; set; }
-
-
-
+        public string Enfermedad_Paciente { get; set; }
 
 
 
         //REFERENCIAS A LA TABLA DE DOCTOR
+
         [Display(Name = "Doctor")]
         public int DoctorId { get; set; }
 

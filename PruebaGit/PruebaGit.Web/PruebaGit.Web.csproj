@@ -182,17 +182,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202012010713145_StarProyect.cs" />
-    <Compile Include="Migrations\202012010713145_StarProyect.Designer.cs">
-      <DependentUpon>202012010713145_StarProyect.cs</DependentUpon>
+    <Compile Include="Migrations\202012022235521_StarProject.cs" />
+    <Compile Include="Migrations\202012022235521_StarProject.Designer.cs">
+      <DependentUpon>202012022235521_StarProject.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202012010730398_StartAdmin.cs" />
-    <Compile Include="Migrations\202012010730398_StartAdmin.Designer.cs">
-      <DependentUpon>202012010730398_StartAdmin.cs</DependentUpon>
+    <Compile Include="Migrations\202012022239317_StartAdmin.cs" />
+    <Compile Include="Migrations\202012022239317_StartAdmin.Designer.cs">
+      <DependentUpon>202012022239317_StartAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202012020851173_StartPac.cs" />
-    <Compile Include="Migrations\202012020851173_StartPac.Designer.cs">
-      <DependentUpon>202012020851173_StartPac.cs</DependentUpon>
+    <Compile Include="Migrations\202012022241326_StartDoctor.cs" />
+    <Compile Include="Migrations\202012022241326_StartDoctor.Designer.cs">
+      <DependentUpon>202012022241326_StartDoctor.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -374,6 +374,16 @@
     <Content Include="Views\Trabajadors\Details.cshtml" />
     <Content Include="Views\Trabajadors\Edit.cshtml" />
     <Content Include="Views\Trabajadors\Index.cshtml" />
+    <Content Include="Views\Doctors\Create.cshtml" />
+    <Content Include="Views\Doctors\Delete.cshtml" />
+    <Content Include="Views\Doctors\Details.cshtml" />
+    <Content Include="Views\Doctors\Edit.cshtml" />
+    <Content Include="Views\Doctors\Index.cshtml" />
+    <Content Include="Views\Pacientes\Create.cshtml" />
+    <Content Include="Views\Pacientes\Delete.cshtml" />
+    <Content Include="Views\Pacientes\Details.cshtml" />
+    <Content Include="Views\Pacientes\Edit.cshtml" />
+    <Content Include="Views\Pacientes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -390,14 +400,14 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202012010713145_StarProyect.resx">
-      <DependentUpon>202012010713145_StarProyect.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202012022235521_StarProject.resx">
+      <DependentUpon>202012022235521_StarProject.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012010730398_StartAdmin.resx">
-      <DependentUpon>202012010730398_StartAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202012022239317_StartAdmin.resx">
+      <DependentUpon>202012022239317_StartAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012020851173_StartPac.resx">
-      <DependentUpon>202012020851173_StartPac.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202012022241326_StartDoctor.resx">
+      <DependentUpon>202012022241326_StartDoctor.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

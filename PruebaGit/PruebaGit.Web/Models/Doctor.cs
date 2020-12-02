@@ -10,7 +10,7 @@ namespace PruebaGit.Web.Models
         [Required]
         [Display(Name = "Doctor")]
 
-        public string Nombre { get; set; }
+        public string Nombre_Doctor { get; set; }
         public ICollection<Paciente>Pacientes { get; set; }
     }
 }
