@@ -173,7 +173,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\accountController.cs" />
+    <Compile Include="Controllers\Actividads1Controller.cs" />
+    <Compile Include="Controllers\ActividadsController.cs" />
     <Compile Include="Controllers\AdministradorsController.cs" />
+    <Compile Include="Controllers\AgregarActividads1Controller.cs" />
+    <Compile Include="Controllers\AgregarActividadsController.cs" />
     <Compile Include="Controllers\DoctorsController.cs" />
     <Compile Include="Controllers\homeController.cs" />
     <Compile Include="Controllers\HospitalsController.cs" />
@@ -200,9 +204,15 @@
     <Compile Include="Migrations\202012030041103_StartHospital.Designer.cs">
       <DependentUpon>202012030041103_StartHospital.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012030338567_StartActividad1.cs" />
+    <Compile Include="Migrations\202012030338567_StartActividad1.Designer.cs">
+      <DependentUpon>202012030338567_StartActividad1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Actividad.cs" />
     <Compile Include="Models\Administrador.cs" />
+    <Compile Include="Models\AgregarActividad.cs" />
     <Compile Include="Models\Doctor.cs" />
     <Compile Include="Models\Hospital.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -402,6 +412,16 @@
     <Content Include="Views\Registrar_Hospitals\Details.cshtml" />
     <Content Include="Views\Registrar_Hospitals\Edit.cshtml" />
     <Content Include="Views\Registrar_Hospitals\Index.cshtml" />
+    <Content Include="Views\Actividads1\Create.cshtml" />
+    <Content Include="Views\Actividads1\Delete.cshtml" />
+    <Content Include="Views\Actividads1\Details.cshtml" />
+    <Content Include="Views\Actividads1\Edit.cshtml" />
+    <Content Include="Views\Actividads1\Index.cshtml" />
+    <Content Include="Views\AgregarActividads1\Create.cshtml" />
+    <Content Include="Views\AgregarActividads1\Delete.cshtml" />
+    <Content Include="Views\AgregarActividads1\Details.cshtml" />
+    <Content Include="Views\AgregarActividads1\Edit.cshtml" />
+    <Content Include="Views\AgregarActividads1\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -429,6 +449,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012030041103_StartHospital.resx">
       <DependentUpon>202012030041103_StartHospital.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012030338567_StartActividad1.resx">
+      <DependentUpon>202012030338567_StartActividad1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
