@@ -17,33 +17,31 @@
 
     <div class="navbar navbar-dark">
         <div class="container">
-            <div class="navbar-header">
-                @Html.ActionLink("Hospital Express", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
+
             <div class="navbar navbar-dark">
                 <nav class="navbar-header">
-                    @Html.ActionLink("Inicio", "Index", "Home", new { @class = "navbar-brand     btn btn-outline-primary text-dark" })
-                    @Html.ActionLink("Contacto", "Contact", "Home", new { @class = "navbar-brand btn btn-outline-primary text-dark" })
-                    @Html.ActionLink("Acerca ", "About", "Home", new { @class = "navbar-brand    btn btn-outline-primary text-dark" })
+                                @Html.ActionLink("Hospital Express", "Index", "Home", new { area = "" }, new { @class = "navbar-brand text-dark fa-2x" })
+                                @Html.ActionLink("Inicio", "Index", "Home", new { @class = "navbar-brand      text-dark" })
+                                @Html.ActionLink("Contacto", "Contact", "Home", new { @class = "navbar-brand  text-dark" })
+                                @Html.ActionLink("Acerca ", "About", "Home", new { @class = "navbar-brand     text-dark" })
 
-                    @if (User.Identity.IsAuthenticated)
+                                @if (User.Identity.IsAuthenticated)
 
-                    {
-                        <a href="@Url.Action("Index","Trabajadors")" class="navbar-brand btn btn-outline-primary text-dark">Empleados</a>
-                        <a href="@Url.Action("Index","Administradors")" class="navbar-brand btn btn-outline-primary text-dark">Administrador</a>
-                        <a href="@Url.Action("Index","Doctors")" class="navbar-brand btn btn-outline-primary text-dark">Doctor</a>
-                        <a href="@Url.Action("Index","Pacientes")" class="navbar-brand btn btn-outline-primary text-dark">Pacientes</a>
-
-                        <a href="@Url.Action("Index","Hospitals")" class="navbar-brand btn btn-outline-primary text-dark">Hospitales</a>
-                        <a href="@Url.Action("Index","Registrar_Hospitals")" class="navbar-brand btn btn-outline-primary text-dark">Registrar Hospital</a>
-                        <a href="@Url.Action("Index","Actividad")" class="navbar-brand btn btn-outline-primary text-dark">Hospitales</a>
-                        <a href="@Url.Action("Index","Registrar_Hospitals")" class="navbar-brand btn btn-outline-primary text-dark">Registrar Hospital</a>
-
-
+                                {
+                                    <a href="@Url.Action("Index","Trabajadors")" class="navbar-brand text-dark">Empleados</a>
+                                    <a href="@Url.Action("Index","Administradors")" class="navbar-brand  text-dark">Administrador</a>
+                                    <a href="@Url.Action("Index","Doctors")" class="navbar-brand  text-dark">Doctor</a>
+                                    <a href="@Url.Action("Index","Pacientes")" class="navbar-brand  text-dark">Pacientes</a>
+                                    <a href="@Url.Action("Index","Hospitals")" class="navbar-brand  text-dark">Hospitales</a>
+                                    <a href="@Url.Action("Index","Registrar_Hospitals")" class="navbar-brand  text-dark">Registrar Hospital</a>
+                                    <a href="@Url.Action("Index","Actividads1")" class="navbar-brand  text-dark">Actividades</a>
+                                    <a href="@Url.Action("Index","Registrar_Hospitals")" class="navbar-brand  text-dark">Registrar Actividad</a>
 
 
-                    }
-                </nav>
+
+
+                                }
+                            </nav>
 
 
 
