@@ -4,10 +4,8 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear una nueva actividad", "Create","Actividads1", new { @class = "navbar-brand text-dark" })
 </p>
 <table class="table">
     <tr>
@@ -23,9 +21,9 @@
             @Html.DisplayFor(modelItem => item.ActividadId)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.Id })
         </td>
     </tr>
 }
