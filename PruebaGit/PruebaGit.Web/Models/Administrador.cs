@@ -10,7 +10,9 @@ namespace PruebaGit.Web.Models
     public class Administrador
     {
         public int Id { get; set; }
+
         [Display(Name ="Usuario")]
+       
         public string Id_Usuario { get; set; }
 
         [Display(Name = "Nombre")]
