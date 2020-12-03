@@ -4,11 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<nav class="nav navbar-dark">
+    @Html.ActionLink("Agregar un nuevo Hospital", "Create","Hospitals" ,new { @class = "navbar-brand text-dark" })
+</nav>
+         
 <table class="table">
     <tr>
         <th>

@@ -18,7 +18,7 @@
     <div class="navbar navbar-dark">
         <div class="container">
             <div class="navbar-header">
-                @Html.ActionLink("Hospital Express", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Hospital Express", "Index", "Home", new { area = "" }, new { @class = "navbar-brand text-dark" })
             </div>
             <div class="navbar navbar-dark">
                 <nav class="navbar-header">
@@ -26,27 +26,30 @@
                     @Html.ActionLink("Contacto", "Contact", "Home", new { @class = "navbar-brand btn btn-outline-primary text-dark" })
                     @Html.ActionLink("Acerca ", "About", "Home", new { @class = "navbar-brand    btn btn-outline-primary text-dark" })
 
+                    <h1> </h1>  <h1> </h1> <h1> </h1> <h1> </h1> <h1> </h1> <h1> </h1>
+
+
                     @if (User.Identity.IsAuthenticated)
 
                     {
-                        <a href="@Url.Action("Index","Trabajadors")" class="navbar-brand btn btn-outline-primary text-dark">Empleados</a>
-                        <a href="@Url.Action("Index","Administradors")" class="navbar-brand btn btn-outline-primary text-dark">Administrador</a>
-                        <a href="@Url.Action("Index","Doctors")" class="navbar-brand btn btn-outline-primary text-dark">Doctor</a>
-                        <a href="@Url.Action("Index","Pacientes")" class="navbar-brand btn btn-outline-primary text-dark">Pacientes</a>
 
-                        <a href="@Url.Action("Index","Hospitals")" class="navbar-brand btn btn-outline-primary text-dark">Hospitales</a>
-                        <a href="@Url.Action("Index","Registrar_Hospitals")" class="navbar-brand btn btn-outline-primary text-dark">Registrar Hospital</a>
-                        <a href="@Url.Action("Index","Actividad")" class="navbar-brand btn btn-outline-primary text-dark">Hospitales</a>
-                        <a href="@Url.Action("Index","Registrar_Hospitals")" class="navbar-brand btn btn-outline-primary text-dark">Registrar Hospital</a>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Registros
+                            </button>
+                            <div class="dropdown-menu bg-light" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item bg-light text-dark" href="@Url.Action("Index","Administradors")">Administrador</a>
+                                <a class="dropdown-item bg-light text-dark" href="@Url.Action("Index","Doctors")">Doctores</a>
+                                <a class="dropdown-item bg-light text-dark" href="@Url.Action("Index","Trabajadors")">Empleados</a>
+                                <a class="dropdown-item bg-light text-dark" href="@Url.Action("Index","Pacientes")">Pacientes</a>
+                                <a class="dropdown-item bg-light text-dark" href="@Url.Action("Index","Hospitals")">Hospitales</a>
+                                <a class="dropdown-item bg-light text-dark" href="@Url.Action("Index","Registrar_Hospitals")">Registrar un hospital</a>
 
-
-
+                            </div>
+                        </div>
 
                     }
                 </nav>
-
-
-
                 <div class="navbar navbar-dark">
                     <a> @Html.Partial("_LoginPartial", new { @class = "navbar-brand    btn btn-outline-primary text-dark" })</a>
                 </div>
