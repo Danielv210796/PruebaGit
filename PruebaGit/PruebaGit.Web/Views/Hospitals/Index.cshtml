@@ -3,30 +3,43 @@
 @{
     ViewBag.Title = "Index";
 }
+    <div class="container">
+        <div class="row justify-content-center">
+            <p>
+                @Html.ActionLink("Agregar un nuevo Hospital", "Create", "Hospitals", new { @class = " btn btn-outline-info navbar-brand text-dark" })
+            </p>
+            <div class="col-md-12 bg-info">
+                <div class="card">
+                    <div class="card-body">
 
-<nav class="nav navbar-dark">
-    @Html.ActionLink("Agregar un nuevo Hospital", "Create","Hospitals" ,new { @class = "navbar-brand text-dark" })
-</nav>
-         
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Numero_Hospital)
-        </th>
-        <th></th>
-    </tr>
+                        <table class="table table-hover">
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Numero_Hospital)
+                                </th>
+                                <th></th>
+                            </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Numero_Hospital)
-        </td>
-        <td>
-            @Html.ActionLink("Edita", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Detalles", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Borrar", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Numero_Hospital)
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Edita", "Edit", new { id = item.Id }) |
+                                        @Html.ActionLink("Detalles", "Details", new { id = item.Id }) |
+                                        @Html.ActionLink("Borrar", "Delete", new { id = item.Id })
+                                    </td>
+                                </tr>
+                                
+                            }
+                            
 
-</table>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
