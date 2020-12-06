@@ -19,6 +19,7 @@
                                 <th></th>
                             </tr>
 
+<<<<<<< Updated upstream
                             @foreach (var item in Model)
                             {
                                 <tr>
@@ -32,6 +33,22 @@
                                     </td>
                                 </tr>
                             }
+=======
+@*<p>
+    @Html.ActionLink("Agrega un nuevo doctor", "Create","Doctors", new { @class = "navbar-brand text-dark" })
+</p>*@
+
+<p class="mt-3">
+    <a data-toggle="modal" data-target="#AddModal" class="nav navbar-brand text-dark" href="#">Agregar doctor</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre_Doctor)
+        </th>
+        <th></th>
+    </tr>
+>>>>>>> Stashed changes
 
                         </table>
                         </div>
@@ -40,3 +57,37 @@
             </div>
         </div>
 
+<<<<<<< Updated upstream
+=======
+</table>
+<div class="modal fade" id="AddModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-light">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar Trabajador</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <form action="@Url.Action("Create","Doctors" )" method="post">
+                @Html.AntiForgeryToken()
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="col-md-6 col-form-label">
+                            Nombre del doctor
+                        </label>
+                        <div class="col-md-10">
+                            <input type="text" value="" name="Nombre_Doctor" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-danger">Guardar cambios</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+>>>>>>> Stashed changes

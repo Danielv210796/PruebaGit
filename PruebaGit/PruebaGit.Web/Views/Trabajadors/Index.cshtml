@@ -45,15 +45,15 @@
                 </button>
             </div>
 
-            <form action="@Url.Action("Create","Trabajadors" )" method="post">
+            <form action="@Url.Action("Create","Hospitals" )" method="post">
                 @Html.AntiForgeryToken()
                 <div class="modal-body">
                     <div class="form-group">
                         <label class="col-md-6 col-form-label">
-                            Nombre
+                            Nombre del hospital
                         </label>
                         <div class="col-md-10">
-                            <input type="text" value="" name="Nombre" class="form-control" />
+                            <input type="text" value="" name="Numero_Hospital" class="form-control" />
                         </div>
                     </div>
                 </div>
