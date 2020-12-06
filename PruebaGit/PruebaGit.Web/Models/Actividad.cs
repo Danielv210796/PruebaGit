@@ -12,7 +12,7 @@ namespace PruebaGit.Web.Models
 
         [Required]
         [Display(Name = "Actividad")]
-        public int ActividadId { get; set; }
+        public string ActividadId { get; set; }
 
 
         public ICollection<AgregarActividad> AgregarActividads { get; set; }

@@ -3,65 +3,46 @@
 @{
     ViewBag.Title = "Index";
 }
-    <div class="container">
-        <div class="row justify-content-center">
-            <p>
-                @Html.ActionLink("Agregar un nuevo Hospital", "Create", "Hospitals", new { @class = " btn btn-outline-info navbar-brand text-dark" })
-            </p>
-            <div class="col-md-12 bg-info">
-                <div class="card">
-                    <div class="card-body">
-
-<<<<<<< Updated upstream
-                        <table class="table table-hover">
-                            <tr>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.Numero_Hospital)
-                                </th>
-                                <th></th>
-                            </tr>
-=======
-@*<nav class="nav navbar-dark">
-    @Html.ActionLink("Agregar un nuevo Hospital", "Create","Hospitals" ,new { @class = "navbar-brand text-dark" })
-</nav>*@
+@*SE AGREGO EL MODAL*@
 <p class="mt-3">
     <a data-toggle="modal" data-target="#AddModal" class="nav navbar-brand text-dark" href="#">Agregar Hospital</a>
-</p> 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Numero_Hospital)
-        </th>
-        <th></th>
-    </tr>
->>>>>>> Stashed changes
+</p>
 
-                            @foreach (var item in Model)
-                            {
-                                <tr>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Numero_Hospital)
-                                    </td>
-                                    <td>
-                                        @Html.ActionLink("Edita", "Edit", new { id = item.Id }) |
-                                        @Html.ActionLink("Detalles", "Details", new { id = item.Id }) |
-                                        @Html.ActionLink("Borrar", "Delete", new { id = item.Id })
-                                    </td>
-                                </tr>
-                                
-                            }
-                            
-
-                        </table>
-                        </div>
-                    </div>
+@*TABLA*@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12 bg-info">
+            <div class="card">
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Numero_Hospital)
+                            </th>
+                            <th></th>
+                        </tr>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Numero_Hospital)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                                </td>
+                            </tr>
+                        }
+                    </table>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
-<<<<<<< Updated upstream
-=======
-</table>
+
+@*MODAL*@
 <div class="modal fade" id="AddModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -71,7 +52,6 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-
             <form action="@Url.Action("Create","Hospitals" )" method="post">
                 @Html.AntiForgeryToken()
                 <div class="modal-body">
@@ -92,4 +72,3 @@
         </div>
     </div>
 </div>
->>>>>>> Stashed changes
