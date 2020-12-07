@@ -4,29 +4,41 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card bg-info">
+                <div class="card-header">
+                    <h3 class="card-title text-light">Estas seguro que quieres eliminar este registro?</h3>
+                    <div>
+                        <hr />
 
-<h3>Estas seguro que quieres borrar este hospital?</h3>
-<div>
-    <h4>Hospital</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Numero_Hospital)
-        </dt>
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Numero_Hospital)
+                            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Numero_Hospital)
-        </dd>
+                            <dd>
+                                @Html.DisplayFor(model => model.Numero_Hospital)
+                            </dd>
 
-    </dl>
+                        </dl>
+                        
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
 
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
+                    <div class="form-actions">
+                        <input type="submit" value="Eliminar" class="btn btn-danger" />
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+                        <div class="btn btn-outline-light float-lg-right">
+                            @Html.ActionLink("Regresar al Index ", "Index")
+                        </div>
+                    </div>  
+                        }
+                    </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    }
-</div>
+    </div>
