@@ -3,7 +3,12 @@
 @{
     ViewBag.Title = "Index";
 }
-
+            <p class="mt-3">
+                @if(User.IsInRole("Administrator"))
+                {
+                <a data-toggle="modal" data-target="#AddModal" class="nav navbar-brand text-dark btn btn-outline-info" href="#">Agregar empleados </a>
+                }
+            </p>
 
 <div class="container">
     <div class="row justify-content-center">

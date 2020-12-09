@@ -12,7 +12,6 @@ namespace PruebaGit.Web.Models
     {
 
         //creacion de utility
-
         readonly static ApplicationDbContext db = new ApplicationDbContext();
       
 
@@ -36,18 +35,29 @@ namespace PruebaGit.Web.Models
             }
 
         }
+
         //metodo para el Super Usuario = Administrador
-        private static void CreateSuperUser(string email, string password, object phone, string rol)
+        private static void CreateSuperUser(string email, string password, string phone, string rol)
         {
             var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
             //creacion de objeto
             var user = new ApplicationUser()
             {
-            UserName=email
+            UserName=email,
+            Email=email,
+            PhoneNumber=phone
 
             };
+            //Crear el usuario 
+            userManager.Create(user,password);
+            //Agregar o crear un rol al usuario
+            userManager.AddRole(user.Id,rol);
+        }
 
-
+        //Destructor 
+        public void Dispose()
+        {
+            db.Dispose();
         }
     }
 }

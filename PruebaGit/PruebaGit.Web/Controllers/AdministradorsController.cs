@@ -48,7 +48,7 @@ namespace PruebaGit.Web.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Id_Usuario,Nombre,APM,APP,TrabajadorId")] Administrador administrador)
+        public ActionResult Create(Administrador administrador)
         {
             if (ModelState.IsValid)
             {
