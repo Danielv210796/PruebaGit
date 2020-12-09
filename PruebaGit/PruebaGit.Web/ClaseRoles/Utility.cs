@@ -20,5 +20,10 @@ namespace PruebaGit.Web.ClaseRoles
                 role.Create(new IdentityRole(rol));
             }
         }
+
+        internal static void CheckSuperUser()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

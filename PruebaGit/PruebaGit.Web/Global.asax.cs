@@ -18,6 +18,7 @@ namespace PruebaGit.Web
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             this.CheckRoles();
+            Utility.CheckSuperUser();
         }
         private void CheckRoles()
         {
