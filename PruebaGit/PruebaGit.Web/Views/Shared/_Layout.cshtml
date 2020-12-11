@@ -51,11 +51,15 @@
                             </div>
                         </div>
                     }
-                    //PENDIENTE 
-                    @*@if (User.IsInRole("Administrator"))
+                   
+                    @if (User.IsInRole("Administrator"))
                     {
                         <a href="@Url.Action("Index","Roles")">ROLES</a>
-                    }*@
+                    }
+                    @if(User.IsInRole("Pacientes"))
+                    {
+                        <a href="@Url.Action("Index","Roles")">Roles</a>
+                    }
 
                 </nav>
                 <div class="navbar navbar-dark">

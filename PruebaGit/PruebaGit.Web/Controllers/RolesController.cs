@@ -24,15 +24,9 @@ namespace PruebaGit.Web.Controllers
             return View(user);
         }
       
-        //    [HttpPost]
-        //   //FALTA AJUSTAR EL METODO DE POST NO FUNCIONA
-        //public ActionResult AddRoles(Roles roles )
-        //{
-
-        //    db.Roles.Add(roles);
-        //    db.SaveChanges();
-        //    return RedirectToAction("Index");
-        //}
+    
+           //FALTA AJUSTAR EL METODO DE POST NO FUNCIONA
+    
         //FALTA AJUSTAR EL METODO DE POST NO FUNCIONA
     }
 }
