@@ -21,6 +21,7 @@
         <div class="container">
             <div class="navbar-header">
                 @Html.ActionLink("Hospital Express", "Index", "Home", new { area = "" }, new { @class = "navbar-brand text-dark" })
+            
             </div>
             <div class="navbar navbar-dark">
                 <nav class="navbar-header">
@@ -45,21 +46,12 @@
                                 <a class="dropdown-item bg-light text-dark" href="@Url.Action("Index","Actividads1")">Alta actividades</a>
                                 <a class="dropdown-item bg-light text-dark" href="@Url.Action("Index","Pacientes")">Registrar un pacientes</a>
                                 <a class="dropdown-item bg-light text-dark" href="@Url.Action("Index","AgregarActividads1")">Registrar una actividad</a>
-                                <a class="dropdown-item bg-light text-dark" href="@Url.Action("Index","Registrar_Hospitals")">Registrar un hospital</a>
-                                <a class="dropdown-item bg-light text-dark" href="@Url.Action("Index","Roles")">Asignacion de roles</a>
-
+                                <a class="dropdown-item bg-light text-dark" href="@Url.Action("Index","Registrar_Hospitals")">Registrar un hospital</a>                             
                             </div>
                         </div>
                     }
                    
-                    @if (User.IsInRole("Administrator"))
-                    {
-                        <a href="@Url.Action("Index","Roles")">ROLES</a>
-                    }
-                    @if(User.IsInRole("Pacientes"))
-                    {
-                        <a href="@Url.Action("Index","Roles")">Roles</a>
-                    }
+               
 
                 </nav>
                 <div class="navbar navbar-dark">

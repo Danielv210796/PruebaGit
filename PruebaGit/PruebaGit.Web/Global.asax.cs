@@ -1,4 +1,4 @@
-using PruebaGit.Web.ClaseRoles;
+using PruebaGit.Web.Clase;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,15 +19,16 @@ namespace PruebaGit.Web
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             this.CheckRoles();
             Utility.CheckSuperUser();
+      
         }
+
         private void CheckRoles()
         {
-            Utility.CheckRoles("Administrator");
-            Utility.CheckRoles("Doctores");
-            Utility.CheckRoles("Actividades");
-            Utility.CheckRoles("Hospitales");
-            Utility.CheckRoles("Pacientes");
-
+              Utility.CheckRoles("Administrator");
+              Utility.CheckRoles("Doctores");
+              Utility.CheckRoles("Actividades");
+              Utility.CheckRoles("Hospitales");
+              Utility.CheckRoles("Pacientes");
         }
     }
 }

@@ -16,6 +16,17 @@ namespace PruebaGit.Web.Models
             // Agregar aquí notificaciones personalizadas de usuario
             return userIdentity;
         }
+
+
+        //tabla para el perfil
+        public string Name { get; set; }
+        public string Descripcion { get; set; }
+        public string Hobbies { get; set; }
+        public string Musics { get; set; }
+        public string Videos { get; set; }
+        public string Photo { get; set; }
+      
+
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
