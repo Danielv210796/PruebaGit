@@ -1,3 +1,4 @@
+using PruebaGit.Web.ClaseRoles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,17 @@ namespace PruebaGit.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            this.CheckRoles();
+            Utility.CheckSuperUser();
+        }
+        private void CheckRoles()
+        {
+            Utility.CheckRoles("Administrator");
+            Utility.CheckRoles("Doctores");
+            Utility.CheckRoles("Actividades");
+            Utility.CheckRoles("Hospitales");
+            Utility.CheckRoles("Pacientes");
+
         }
     }
 }

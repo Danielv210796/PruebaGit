@@ -25,10 +25,10 @@
                                 @Html.DisplayNameFor(model => model.Nombre_Paciente)
                             </th>
                             <th>
-                                @Html.DisplayNameFor(model => model.AM_Paciente)
+                                @Html.DisplayNameFor(model => model.AP_Paciente)
                             </th>
                             <th>
-                                @Html.DisplayNameFor(model => model.AP_Paciente)
+                                @Html.DisplayNameFor(model => model.AM_Paciente)
                             </th>
                             <th>
                                 @Html.DisplayNameFor(model => model.Fecha_Nacimiento_Paciente)
@@ -76,9 +76,9 @@
                                     @Html.DisplayFor(modelItem => item.Enfermedad_Paciente)
                                 </td>
                                 <td>
-                                    @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
-                                    @Html.ActionLink("Detalles", "Details", new { id = item.Id }) |
-                                    @Html.ActionLink("Borrar", "Delete", new { id = item.Id })
+                                    @Html.ActionLink("Editar", "Edit", new { id = item.Id }, new { @class = "btn btn-warning fas fa-trash text-light" }) |
+                                    @Html.ActionLink("Ver", "Details", new { id = item.Id }, new { @class = "btn btn-success fas fa-eye" }) |
+                                    @Html.ActionLink("Eliminar", "Delete", new { id = item.Id }, new { @class = "btn btn-danger fas fa-trash" })
                                 </td>
                             </tr>
                         }

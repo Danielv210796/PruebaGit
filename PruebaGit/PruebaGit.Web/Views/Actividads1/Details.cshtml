@@ -4,23 +4,33 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<div class="container-fluid text-light">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card bg-info">
+                <div class="card-body text-lg-center ">
+                    <h1>Actividad</h1>
+                    <hr />
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ActividadId)
+                        </dt>
 
-<div>
-    <h4>Actividad</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ActividadId)
-        </dt>
+                        <dd>
+                            @Html.DisplayFor(model => model.ActividadId)
+                        </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.ActividadId)
-        </dd>
+                    </dl>
+                </div>
+                <div class="form text-center p-3">
+                    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }, new { @class = "text-light btn btn-warning" })
+                    <div class="btn btn-light btn-group-toggle">
+                        @Html.ActionLink("Salir", "Index")
+                    </div>
+                </div>
 
-    </dl>
+            </div>
+        </div>
+    </div>
+
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

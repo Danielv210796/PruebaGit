@@ -3,7 +3,12 @@
 @{
     ViewBag.Title = "Index";
 }
-
+            <p class="mt-3">
+                @if(User.IsInRole("Administrator"))
+                {
+                <a data-toggle="modal" data-target="#AddModal" class="nav navbar-brand text-dark btn btn-outline-info" href="#">Agregar empleados </a>
+                }
+            </p>
 
 <div class="container">
     <div class="row justify-content-center">
@@ -54,8 +59,8 @@
                                 </td>
                                 <td>
                                     @Html.ActionLink("Editar", "Edit", new { id = item.Id }, new { @class = "btn btn-warning fas fa-trash text-light" }) |
-                                    @Html.ActionLink("Detalles", "Details", new { id = item.Id }, new { @class = "btn btn-success fas fa-trash" }) |
-                                    @Html.ActionLink("Borrar", "Delete", new { id = item.Id }, new { @class = "btn btn-danger fas fa-trash" })
+                                    @Html.ActionLink("Ver", "Details", new { id = item.Id }, new { @class = "btn btn-success fas fa-eye" }) |
+                                    @Html.ActionLink("Eliminar", "Delete", new { id = item.Id }, new { @class = "btn btn-danger fas fa-trash" })
                                 </td>
                             </tr>
                         }

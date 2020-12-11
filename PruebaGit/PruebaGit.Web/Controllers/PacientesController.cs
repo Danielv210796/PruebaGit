@@ -48,7 +48,7 @@ namespace PruebaGit.Web.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,No_Paciente,Nombre_Paciente,AM_Paciente,AP_Paciente,Fecha_Nacimiento_Paciente,Genero_Paciente,Numero_Paciente,Enfermedad_Paciente,DoctorId")] Paciente paciente)
+        public ActionResult Create(Paciente paciente)
         {
             if (ModelState.IsValid)
             {
