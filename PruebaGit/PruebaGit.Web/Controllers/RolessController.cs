@@ -26,7 +26,7 @@ namespace PruebaGit.Web.Controllers
             var user = db.Users.Find(id);
             return View(user);
         }
-          /** NO FUNCIONA ESTA SECCION 
+          /**NO FUNCIONA ESTA SECCION 
         [HttpPost]
         public ActionResult AddRoles(UserViewModels uvm)
         {

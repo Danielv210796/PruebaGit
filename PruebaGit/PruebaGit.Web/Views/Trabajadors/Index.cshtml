@@ -4,20 +4,20 @@
     ViewBag.Title = "Index";
 }
 
-<div class="container">
-    <div class="row justify-content-center">
-        @*Se agrega el modal*@
-        <p class="mt-3">
-            <a data-toggle="modal" data-target="#AddModal" class="nav navbar-brand text-dark btn btn-outline-info text-center" href="#">Agregar trabajador</a>
-        </p>
-        @*TABLA*@
-    </div>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8 bg-info">
+            @*Se agrega el modal*@
+            <p class="mt-3 text-center">
+                <a data-toggle="modal" data-target="#AddModal" class="nav navbar-brand text-dark btn btn-outline-primary " href="#">Agregar trabajador</a>
+            </p>
+            @*TABLA*@
+        </div>
+        <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 bg-gradient-primary">
                 <div class="card">
                     <div class="card-body">
-                        <table class="table table-hover bg-info">
+                        <table class="table table-hover">
                             <tr>
                                 <th>
                                     @Html.DisplayNameFor(model => model.Nombre)
@@ -31,19 +31,19 @@
                                         @Html.DisplayFor(modelItem => item.Nombre)
                                     </td>
                                     <td>
-                                        @Html.ActionLink("Editar", "Edit", new { id = item.Id }, new { @class = "btn btn-warning fas fa-trash text-light" }) |
+                                        @Html.ActionLink("Editar", "Edit", new { id = item.Id }, new { @class = "btn btn-warning fas fa-edit text-light" }) |
                                         @Html.ActionLink("Ver", "Details", new { id = item.Id }, new { @class = "btn btn-success fas fa-eye" }) |
-                                        @Html.ActionLink("Eliminar", "Delete", new { id = item.Id }, new { @class = "btn btn-danger fas fa-trash" })
+                                        @Html.ActionLink("Eliminar", "Delete", new { id = item.Id }, new { @class = "btn btn-danger fas fa-ban" })
                                     </td>
                                 </tr>
                             }
                         </table>
-                        </div>
                     </div>
-                    </div>
-
                 </div>
             </div>
+
+        </div>
+    </div>
         </div>
 
         @*MODAL*@
