@@ -13,7 +13,7 @@ namespace PruebaGit.Web.Controllers
     public class RolessController : Controller
     {
         readonly ApplicationDbContext db = new ApplicationDbContext();
-        // GET: Roless
+        // GET: Roless para asignar roles
         public ActionResult Index()
         {
             var users = db.Users.ToList();
