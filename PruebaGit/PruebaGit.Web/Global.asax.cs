@@ -1,4 +1,5 @@
 
+using PruebaGit.Web.Claserol;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,6 +7,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+
+
 
 namespace PruebaGit.Web
 {
@@ -17,11 +20,18 @@ namespace PruebaGit.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-           
-            
-      
+            this.CheckRoles();
+            Utility.CheckSuperUsuario();
+
         }
 
-        
+        private void CheckRoles()
+        {
+            Utility.CheckRoles("Actividades");
+            Utility.CheckRoles("Administrador");
+            Utility.CheckRoles("Doctores");
+            Utility.CheckRoles("Hospitales");
+            Utility.CheckRoles("Pacientes");
+        }
     }
 }
