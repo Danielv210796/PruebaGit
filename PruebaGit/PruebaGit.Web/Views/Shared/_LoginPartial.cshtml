@@ -2,20 +2,19 @@
 
 @if (Request.IsAuthenticated)
 {
-    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar" }))
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-brand" }))
     {
                     @Html.AntiForgeryToken()
+   
+            <div class="bg-white py-2 collapse-inner rounded navbar-brand">     
+                <div class="bg-white py-2 collapse-inner rounded text-body">
+                    <a href="@Url.Action("Details", "Profile")" title="Perfil">Bienvenido @User.Identity.GetUserName()</a>
 
-            <ul class="nav navbar-nav navbar-right">
-                <li nav-item>
-                   
-            <a href="@Url.Action("Details", "Profile")" class="btn btn-outline-primary text-dark" title="Perfil">Bienvenido @User.Identity.GetUserName()</a>
-                </li>
-      
-                <li>
-                    <a href="javascript:document.getElementById('logoutForm').submit()" class="btn btn-outline-primary text-dark mt-3">Cerrar sesión</a>
-                </li>
-            </ul>
+
+                    <a href="javascript:document.getElementById('logoutForm').submit()" >Cerrar sesión</a>
+                </div>
+            </div>
+           
     }
 }
 
@@ -23,11 +22,9 @@
 else
 {
 
-    @Html.ActionLink("Registrarse", "Register", "Account", routeValues: null, htmlAttributes: new { title="Register", id = "registerLink", @class = "btn btn-outline-primary text-dark mr-3" });
-    @Html.ActionLink("Iniciar sesión", "Login", "Account", routeValues: null, htmlAttributes: new { title="Iniciar Sesion", id = "loginLink", @class = "btn btn-outline-primary text-dark" });
+    @Html.ActionLink("Registrarse", "Register", "Account", routeValues: null, htmlAttributes: new { title="Register", id = "registerLink" });
+    @Html.ActionLink("Iniciar sesión", "Login", "Account", routeValues: null, htmlAttributes: new { title="Iniciar Sesion", id = "loginLink"});
 
 }
 
-        @*</div>
-    </div>
-    </div>*@
+        

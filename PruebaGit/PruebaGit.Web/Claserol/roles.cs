@@ -30,6 +30,7 @@ namespace PruebaGit.Web.Claserol
                 CreaterAdministrador("Administrador@administrador.com", "admin123", null, "Administrador");
             }
 
+
         }
 
         private static void CreaterAdministrador(string email, string password, string phone, string rol)

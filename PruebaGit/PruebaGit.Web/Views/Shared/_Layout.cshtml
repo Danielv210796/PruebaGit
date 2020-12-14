@@ -18,7 +18,7 @@
 </head>
 <body>
 
-    @*<div class="navbar navbar-dark">
+@*<div class="navbar navbar-dark">
         <div class="container">
             <div class="navbar-header">
                 @Html.ActionLink("Hospital Express", "Index", "Home", new { area = "" }, new { @class = "navbar-brand text-dark" })
@@ -51,9 +51,6 @@
                             </div>
                         </div>
                     }
-
-
-
                 </nav>
                 <div class="navbar navbar-dark">
                     <a> @Html.Partial("_LoginPartial", new { @class = "navbar-brand    btn btn-outline-primary text-dark" })</a>
@@ -96,9 +93,10 @@
     <div id="collapseProfile" class="collapse" aria-labelledby="headingProfile"
          data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Utilities:</h6>
-            <a class="collapse-item" href="">Ver Perfil</a>
+            <h6 class="collapse-item">@Html.Partial("_LoginPartial")</h6>
+            @*<a class="collapse-item" href="">Ver Perfil</a>
             <a class="collapse-item" href="">Cerrar Sesion</a>
+            <a class="collapse-item"> </a>*@
         </div>
     </div>
     </li>
