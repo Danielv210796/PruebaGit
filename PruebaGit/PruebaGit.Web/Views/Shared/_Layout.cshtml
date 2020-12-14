@@ -40,7 +40,7 @@
             </li>
 
 
-
+            @*Condicional para acceder con administrador de acuerdo al rol*@
             @if (User.IsInRole("Administrador"))
             {
                 <!-- Divider -->
@@ -60,7 +60,7 @@
                     <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                          data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">Custom Utilities:</h6>
+                        
                             <a class="collapse-item" href="@Url.Action("Index","Trabajadors")">Trabajadores</a>
                             <a class="collapse-item" href="@Url.Action("Index","Administradors")">Administrador</a>
                         </div>
@@ -79,7 +79,7 @@
                     </a>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">Custom Utilities:</h6>
+                          
                             <a class="collapse-item" href="@Url.Action("Index","Pacientes")">Pacientes</a>
                             <a class="collapse-item" href="@Url.Action("Index","Doctors")">Doctores</a>
                         </div>
@@ -98,7 +98,7 @@
                     </a>
                     <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">Custom Utilities:</h6>
+                            
                             <a class="collapse-item" href="@Url.Action("Index","AgregarActividads1")">Registrar Actividad</a>
                             <a class="collapse-item" href="@Url.Action("Index","Actividads1")">Actividades</a>
                         </div>
@@ -116,9 +116,25 @@
                     <div id="collapseHospitales" class="collapse" aria-labelledby="headingHospitales"
                          data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">Custom Utilities:</h6>
+                           
                             <a class="collapse-item" href="@Url.Action("Index","Registrar_Hospitals")">Registrar Hospital</a>
                             <a class="collapse-item" href="@Url.Action("Index","Hospitals")">Hospitales</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRoles"
+                       aria-expanded="true" aria-controls="collapseUtilities">
+                        <i class="fas fa-roles-alt"></i>
+                        <span>Roles</span>
+                    </a>
+                    <div id="collapseRoles" class="collapse" aria-labelledby="headingRoles"
+                         data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                         
+                            <a class="collapse-item" href="@Url.Action("Index","RolesDelHospital")">Roles</a>
+                            
                         </div>
                     </div>
                 </li>

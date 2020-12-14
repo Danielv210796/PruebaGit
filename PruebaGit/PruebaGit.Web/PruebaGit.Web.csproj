@@ -184,7 +184,7 @@
     <Compile Include="Controllers\PacientesController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\Registrar_HospitalsController.cs" />
-    <Compile Include="Controllers\RolessController.cs" />
+    <Compile Include="Controllers\RolesDelHospitalController.cs" />
     <Compile Include="Controllers\TrabajadorsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -445,6 +445,7 @@
     <Content Include="Views\AgregarActividads1\Edit.cshtml" />
     <Content Include="Views\AgregarActividads1\Index.cshtml" />
     <Content Include="Views\Profile\Details.cshtml" />
+    <Content Include="Views\RolesDelHospital\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
