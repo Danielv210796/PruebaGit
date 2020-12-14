@@ -26,27 +26,27 @@ namespace PruebaGit.Web.Controllers
             var user = db.Users.Find(id);
             return View(user);
         }
-          /**NO FUNCIONA ESTA SECCION 
-        [HttpPost]
-        public ActionResult AddRoles(UserViewModels uvm)
-        {
-            var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
+       
+        //[HttpPost]
+        //public ActionResult AddRoles(UserViewModels uvm)
+        //{
+        //    var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
             
-           var userRole = userManager.GetRoles(uvm.UserId);
+        //   var userRole = userManager.GetRoles(uvm.UserId);
 
-            if(userRole.Count>0)
-            {
-                userManager.RemoveFromRoles(uvm.UserId, userRole.ToArray());
-                userManager.AddToRole(uvm.UserId, uvm.RolName);
-            }
-            else
-            {
-                userManager.AddToRole(uvm.UserId, uvm.RolName);
-            }
+        //    if(userRole.Count>0)
+        //    {
+        //        userManager.RemoveFromRoles(uvm.UserId, userRole.ToArray());
+        //        userManager.AddToRole(uvm.UserId, uvm.RolName);
+        //    }
+        //    else
+        //    {
+        //        userManager.AddToRole(uvm.UserId, uvm.RolName);
+        //    }
 
-            return RedirectToAction("Index");
-        }
-          **/
+        //    return RedirectToAction("Index");
+        //}
+          
       
     }
 }
