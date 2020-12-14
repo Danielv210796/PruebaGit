@@ -446,6 +446,7 @@
     <Content Include="Views\AgregarActividads1\Index.cshtml" />
     <Content Include="Views\Profile\Details.cshtml" />
     <Content Include="Views\RolesDelHospital\Index.cshtml" />
+    <Content Include="Views\RolesDelHospital\AddRoles.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
