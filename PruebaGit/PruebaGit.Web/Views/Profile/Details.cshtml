@@ -13,17 +13,19 @@
             <div class="card-body">
                 <div class="row justify-content-center">
                     <div class="col-md-7">
+
                         <div class="card">
-                            <img src="https://cdn.pixabay.com/photo/2019/12/06/13/40/anesthesia-4677401__340.jpg" alt="Picture" class="rounded img-fluid" />
+                            <img src="~/Upload/@Model.Photo" alt="Picture" class="rounded img-fluid" />
                             <form class="form-horizontal" action="@Url.Action("Picture","Profile")" method="post" enctype="multipart/form-data">
-                                <input type="file" value="" class="form-control"/>
-                                <input type="submit" value="Subir foto" class="form-control" />
+                                <input type="file" name="pic" class="form-control" />
+                                <input type="submit" value="Subir foto" class="form-control btn-primary text-light" />
 
                             </form>
                         </div>
                     </div>
                     <div class="col-md-5">
                         <div class="card">
+
                             <div class="card-header  bg-gradient-primary">
                                 <a class="text-light">Informacion de Perfil</a>
 
