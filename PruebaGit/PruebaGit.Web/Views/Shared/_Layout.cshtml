@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -14,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
-   <!-- Page Wrapper -->
+    <!-- Page Wrapper -->
     <div id="wrapper">
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -23,12 +24,12 @@
             <li class="nav-item ">
                 <a class="nav-link text-center" href="#">
                     <img class="img-profile rounded-circle w-50 h-50"
-                         src="https://assets.show.news/__export/1574351023941/sites/debate/img/2019/11/21/scarlett_crop1574350998155.jpg_943222218.jpg">
+                         src="~/Upload/@Model.Photo">
                 </a>
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProfile" aria-expanded="true" aria-controls="collapseProfile">
                     <div class="mr-2 d-none d-lg-inline text-light small ">
-                        <h4>Scarlet Johanson</h4>
+                        <h4>@Model.Name</h4>
                     </div>
                 </a>
                 <div id="collapseProfile" class="collapse" aria-labelledby="headingProfile"
@@ -160,20 +161,20 @@
             @if (User.IsInRole("Pacientes"))
             {
 
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseHospitales"
-               aria-expanded="true" aria-controls="collapseUtilities">
-                <i class="fas fa-hospital-alt"></i>
-                <span>Hospitales</span>
-            </a>
-            <div id="collapseHospitales" class="collapse" aria-labelledby="headingHospitales"
-                 data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseHospitales"
+                       aria-expanded="true" aria-controls="collapseUtilities">
+                        <i class="fas fa-hospital-alt"></i>
+                        <span>Hospitales</span>
+                    </a>
+                    <div id="collapseHospitales" class="collapse" aria-labelledby="headingHospitales"
+                         data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
 
-                    <a class="collapse-item" href="@Url.Action("Index","Hospitals")">Hospitales</a>
-                </div>
-            </div>
-        </li>
+                            <a class="collapse-item" href="@Url.Action("Index","Hospitals")">Hospitales</a>
+                        </div>
+                    </div>
+                </li>
             }
 
 
@@ -182,72 +183,72 @@
 
 
         </ul>
-    <!-- End of Sidebar -->
-    <!-- Content Wrapper -->
-    <div id="content-wrapper">
-        <!-- Main Content -->
-        <div id="content">
-            <!-- Topbar -->
-            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 ">
-                <div class="input-group justify-content-center">
+        <!-- End of Sidebar -->
+        <!-- Content Wrapper -->
+        <div id="content-wrapper">
+            <!-- Main Content -->
+            <div id="content">
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 ">
+                    <div class="input-group justify-content-center">
 
-                    <h1 class=""><i class="far fa-hospital"></i> HOSPITAL EXPRESS</h1>
-                </div>
-                <!-- Topbar Navbar -->
-             
-            </nav>
-            <!-- End of Topbar -->
-            <!-- Begin Page Content -->
-            <div class="container-fluid">
-            </div>
-            <!-- End of Content Wrapper -->
-        </div>
-        <!-- End of Page Wrapper -->
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fas fa-angle-up"></i>
-        </a>
-        <!-- Bootstrap core JavaScript-->
-        <script src="~/Scripts/jquery.min.js"></script>
-
-        <script src="~/Scripts/bootstrap.bundle.min.js"></script>
-        <!-- Core plugin JavaScript-->
-        <script src="~/Scripts/jquery.easing.min.js"></script>
-        <!-- Custom scripts for all pages-->
-        <script src="~/Scripts/sb-admin-2.min.js"></script>
-        <!-- Page level plugins -->
-
-
-
-        <script src="~/Scripts/Chart.min.js"></script>
-
-
-
-
-        <!-- Page level custom scripts -->
-        <script src="~/Scripts/chart-area-demo.js"></script>
-        <script src="~/Scripts/chart-pie-demo.js"></script>
-
-        <div class="container body-content">
-            @RenderBody()
-            <hr />
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Hospital Express</span>
+                        <h1 class=""><i class="far fa-hospital"></i> HOSPITAL EXPRESS</h1>
                     </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
-        </div>
+                    <!-- Topbar Navbar -->
 
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)
+                </nav>
+                <!-- End of Topbar -->
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                </div>
+                <!-- End of Content Wrapper -->
+            </div>
+            <!-- End of Page Wrapper -->
+            <!-- Scroll to Top Button-->
+            <a class="scroll-to-top rounded" href="#page-top">
+                <i class="fas fa-angle-up"></i>
+            </a>
+            <!-- Bootstrap core JavaScript-->
+            <script src="~/Scripts/jquery.min.js"></script>
+
+            <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+            <!-- Core plugin JavaScript-->
+            <script src="~/Scripts/jquery.easing.min.js"></script>
+            <!-- Custom scripts for all pages-->
+            <script src="~/Scripts/sb-admin-2.min.js"></script>
+            <!-- Page level plugins -->
+
+
+
+            <script src="~/Scripts/Chart.min.js"></script>
+
+
+
+
+            <!-- Page level custom scripts -->
+            <script src="~/Scripts/chart-area-demo.js"></script>
+            <script src="~/Scripts/chart-pie-demo.js"></script>
+
+            <div class="container body-content">
+                @RenderBody()
+                <hr />
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright &copy; Hospital Express</span>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End of Footer -->
+            </div>
+
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+            @RenderSection("scripts", required: false)
         </div>
-        </div>
-    
+    </div>
+
 </body>
 </html>
 
