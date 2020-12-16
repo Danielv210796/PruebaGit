@@ -19,7 +19,7 @@
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
             <!-- Divider -->
-            <hr class="sidebar-divider my-0">
+
             <li class="nav-item ">
                 <a class="nav-link text-center" href="#">
                     <img class="img-profile rounded-circle w-50 h-50"
@@ -37,19 +37,14 @@
                         <h6 class="collapse-item">@Html.Partial("_LoginPartial")</h6>
                     </div>
                 </div>
+
             </li>
-
-
             @*Condicional para acceder con administrador de acuerdo al rol*@
             @if (User.IsInRole("Administrador"))
             {
-                <!-- Divider -->
-                <hr class="sidebar-divider">
 
-                <!-- Heading -->
-                <div class="sidebar-heading">
-                    Interface
-                </div>
+
+
                 <!-- Nav Item - Utilities Collapse Menu -->
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
@@ -60,15 +55,16 @@
                     <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                          data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                        
+
                             <a class="collapse-item" href="@Url.Action("Index","Trabajadors")">Trabajadores</a>
                             <a class="collapse-item" href="@Url.Action("Index","Administradors")">Administrador</a>
                         </div>
                     </div>
 
                 </li>
-                <!-- Divider -->
-                <hr class="sidebar-divider">
+
+
+
                 <!-- Nav Item - Utilities Collapse Menu -->
 
                 <li class="nav-item">
@@ -79,15 +75,14 @@
                     </a>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                          
+
                             <a class="collapse-item" href="@Url.Action("Index","Pacientes")">Pacientes</a>
                             <a class="collapse-item" href="@Url.Action("Index","Doctors")">Doctores</a>
                         </div>
                     </div>
                 </li>
 
-                <!-- Divider -->
-                <hr class="sidebar-divider">
+
 
                 <!-- Nav Item - Utilities Collapse Menu -->
                 <li class="nav-item">
@@ -98,14 +93,14 @@
                     </a>
                     <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            
+
                             <a class="collapse-item" href="@Url.Action("Index","AgregarActividads1")">Registrar Actividad</a>
                             <a class="collapse-item" href="@Url.Action("Index","Actividads1")">Actividades</a>
                         </div>
                     </div>
                 </li>
                 <!-- Divider -->
-                <hr class="sidebar-divider">
+
                 <!-- Nav Item - Utilities Collapse Menu -->
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseHospitales"
@@ -116,7 +111,7 @@
                     <div id="collapseHospitales" class="collapse" aria-labelledby="headingHospitales"
                          data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                           
+
                             <a class="collapse-item" href="@Url.Action("Index","Registrar_Hospitals")">Registrar Hospital</a>
                             <a class="collapse-item" href="@Url.Action("Index","Hospitals")">Hospitales</a>
                         </div>
@@ -132,18 +127,60 @@
                     <div id="collapseRoles" class="collapse" aria-labelledby="headingRoles"
                          data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                         
+
                             <a class="collapse-item" href="@Url.Action("Index","RolesDelHospital")">Roles</a>
-                            
+
                         </div>
                     </div>
                 </li>
             }
+            @if (User.IsInRole("Doctores"))
+            {
+                <!-- Nav Item - Utilities Collapse Menu -->
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                       aria-expanded="true" aria-controls="collapseTwo">
+                        <i class="fas fa-stethoscope"></i>
+                        <span>Doctores</span>
+                    </a>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+
+                            <a class="collapse-item" href="@Url.Action("Index","Pacientes")">Pacientes</a>
+                            <a class="collapse-item" href="@Url.Action("Index","Doctors")">Doctores</a>
+                        </div>
+                    </div>
+                </li>
 
 
 
-            <!-- Divider -->
-            <hr class="sidebar-divider">
+                <!-- Nav Item - Utilities Collapse Menu -->
+            }
+            @if (User.IsInRole("Pacientes"))
+            {
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseHospitales"
+               aria-expanded="true" aria-controls="collapseUtilities">
+                <i class="fas fa-hospital-alt"></i>
+                <span>Hospitales</span>
+            </a>
+            <div id="collapseHospitales" class="collapse" aria-labelledby="headingHospitales"
+                 data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+
+                    <a class="collapse-item" href="@Url.Action("Index","Hospitals")">Hospitales</a>
+                </div>
+            </div>
+        </li>
+            }
+
+
+
+
+
+
         </ul>
     <!-- End of Sidebar -->
     <!-- Content Wrapper -->
@@ -157,7 +194,7 @@
                     <h1 class=""><i class="far fa-hospital"></i> HOSPITAL EXPRESS</h1>
                 </div>
                 <!-- Topbar Navbar -->
-                <ul class="navbar-nav ml-auto">
+             
             </nav>
             <!-- End of Topbar -->
             <!-- Begin Page Content -->

@@ -32,7 +32,6 @@ namespace PruebaGit.Web.Claserol
 
 
         }
-
         private static void CreaterAdministrador(string email, string password, string phone, string rol)
         {
             var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
@@ -41,14 +40,50 @@ namespace PruebaGit.Web.Claserol
             {
                 UserName = email,
                 Email = email,
-                PhoneNumber = phone
+                PhoneNumber = phone,
+                Rol = rol
 
             };
+
             //Creamos un usuario
-            userManager.Create(user,password);
+            userManager.Create(user, password);
             //Agregar un rol
             userManager.AddToRole(user.Id, rol);
         }
+        internal static void CheckDoctores()
+        {
+            var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
+            var user = userManager.FindByName("carlos@gmail.com");
+            if (user == null)
+            {
+                CreateDoctores("carlos@gmail.com", "holamundo20", null, "Doctores");
+            }
+
+
+        }
+
+        private static void CreateDoctores(string email, string password, string phone, string rol)
+        {
+            var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
+            //Creamos un objeto
+            var user = new ApplicationUser()
+            {
+                UserName = email,
+                Email = email,
+                PhoneNumber = phone,
+                Rol = rol
+
+            };
+
+            //Creamos un usuario
+            userManager.Create(user, password);
+            //Agregar un rol
+            userManager.AddToRole(user.Id, rol);
+        }
+
+       
+      
+       
         public void Dispose()
         {
             db.Dispose();

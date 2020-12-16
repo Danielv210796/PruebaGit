@@ -20,6 +20,7 @@
                                 <td>Item</td>
                                 <td>Usuario</td>
                                 <td>Email</td>
+                                <td>Rol</td>
                                 <td>Agregamos rol</td>
                             </tr>
                             @{ 
@@ -27,12 +28,13 @@
                             }
                             @foreach (var item in Model)
                             {
-                                <tr>
-                                    <td>@count</td>
-                                    <td>@item.UserName</td>
-                                    <td>@item.Email</td>
-                                    <td><a href="@Url.Action("AddRoles","RolesDelHospital",new { id = item.Id })">Agregar rol</a></td>
-                                </tr>
+                        <tr>
+                            <td>@count</td>
+                            <td>@item.UserName</td>
+                            <td>@item.Email</td>
+                            <td>@item.Rol</td>
+                            <td><a href="@Url.Action("AddRoles","RolesDelHospital",new { id = item.Id })">Agregar rol</a></td>
+                        </tr>
                                 count++;
                             }
                         </table>

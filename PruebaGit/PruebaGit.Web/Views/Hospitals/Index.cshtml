@@ -27,16 +27,20 @@
                             </tr>
                             @foreach (var item in Model)
                             {
-                                <tr>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Numero_Hospital)
-                                    </td>
-                                    <td>
-                                        @Html.ActionLink("Editar", "Edit", new { id = item.Id }, new { @class = "btn btn-warning fas fa-trash text-light" }) |
-                                        @Html.ActionLink("Ver", "Details", new { id = item.Id }, new { @class = "btn btn-success fas fa-eye" }) |
-                                        @Html.ActionLink("Eliminar", "Delete", new { id = item.Id }, new { @class = "btn btn-danger fas fa-trash" })
-                                    </td>
-                                </tr>
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Numero_Hospital)
+                            </td>
+                            @if (User.IsInRole("Administrador"))
+                            {
+                                <td>
+                                    @Html.ActionLink("Editar", "Edit", new { id = item.Id }, new { @class = "btn btn-warning fas fa-trash text-light" }) |
+                                    @Html.ActionLink("Ver", "Details", new { id = item.Id }, new { @class = "btn btn-success fas fa-eye" }) |
+                                    @Html.ActionLink("Eliminar", "Delete", new { id = item.Id }, new { @class = "btn btn-danger fas fa-trash" })
+                                </td>
+                            }
+
+                        </tr>
                             }
                         </table>
                         </div>
@@ -46,7 +50,7 @@
         </div>
     </div>
 
-
+ 
     @*MODAL*@
     <div class="modal fade" id="AddModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">

@@ -14,7 +14,7 @@ namespace PruebaGit.Web.Models
 
         [Required]
         [Display(Name = "Hospital")]
-        public string Numero_Hospital { get; set; }
+        public int Numero_Hospital { get; set; }
 
 
         public ICollection<Registrar_Hospital> Registrar_Hospitals { get; set; }

@@ -25,8 +25,7 @@ namespace PruebaGit.Web.Models
         public string Musics { get; set; }
         public string Videos { get; set; }
         public string Photo { get; set; }
-      
-
+        public string Rol { get; internal set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
