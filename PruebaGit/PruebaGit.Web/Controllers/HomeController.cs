@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PruebaGit.Web.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,15 @@ namespace PruebaGit.Web.Controllers
 {
     public class homeController : Controller
     {
+        ApplicationDbContext db = new ApplicationDbContext();
         public ActionResult Index()
         {
-            return View();
+            if(User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            var administradors = db.Administradors.ToList();
+            return View(administradors);
         }
 
         public ActionResult About()

@@ -18,30 +18,30 @@
                         <form class="" action="@Url.Action("Create","Administradors")" method="post">
                             @Html.AntiForgeryToken()
                             <div class="form-group">
-                                <label class="col-md-10">Id_Usuario</label>
+                                <label class="col-md-10 text-light">Id_Usuario</label>
                                 <div class="col-md-12">
                                     <input type="text" name="Id_Usuario" value="" class="form-control" />
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group text-light">
                                 <label class="col-md-10">Nombre</label>
                                 <div class="col-md-12">
                                     <input type="text" name="Nombre" value="" class="form-control" />
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group text-light">
                                 <label class="col-md-10">Apellido Materno</label>
                                 <div class="col-md-12">
                                     <input type="text" name="APM" value="" class="form-control" />
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group text-light">
                                 <label class="col-md-10">Apellido Paterno</label>
                                 <div class="col-md-12">
                                     <input type="text" name="APP" value="" class="form-control" />
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group text-light">
                                 <label class="col-md-10">TrabajadorId</label>
                                 <div class="col-md-12">
                                     <select class="form-control" name="TrabajadorId" required>
@@ -54,9 +54,10 @@
                                 </div>
                             </div>
                             <dov class="row justify-content-center">
-                                <button type="submit" class="btn btn-icon-split btn-primary"></button>
-                                <span></span>
-                                <span class="btn btn-primary text-light">Guardar</span>
+                                <button type="submit" class=" btn btn-outline-primary"> <i class="fas fa-save m-1"></i>Guardar</button>
+                  <div class="btn-outline-primary ml-4"><span class="fas fa-backward"><a href="@Url.Action("Index","Administradors")" > Regresar</a> </span></div>
+
+
                             </dov>
                         </form>
                     </div>
@@ -65,7 +66,7 @@
         </div>
         </div>
 
-        <div class="container">
+        @*<div class="container">
             <div class="row justify-content-center">
                 <h2 class="bg-info">Dar de alta un nuevo empleado</h2>
                 <div class="col-md-12 bg-info">
@@ -130,7 +131,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>*@
 
 
         }
