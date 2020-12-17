@@ -26,6 +26,8 @@ namespace PruebaGit.Web.Models
 
 
 
+
+
         //REFERENCIAS A LA TABLA DE TRABAJADOR
         [Display(Name ="Trabajador")]
         public int TrabajadorId { get; set; }

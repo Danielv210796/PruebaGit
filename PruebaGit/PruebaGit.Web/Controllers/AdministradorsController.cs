@@ -39,6 +39,8 @@ namespace PruebaGit.Web.Controllers
         // GET: Administradors/Create
         public ActionResult Create()
         {
+            ViewBag.User = db.Users.ToList();
+            ViewBag.Trabajador = db.Trabajadors.ToList(); //select*from trabajadores
             ViewBag.TrabajadorId = new SelectList(db.Trabajadors, "Id", "Nombre");
             return View();
         }
