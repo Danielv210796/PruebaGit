@@ -221,6 +221,10 @@
     <Compile Include="Migrations\202012160505383_StartHospital2.Designer.cs">
       <DependentUpon>202012160505383_StartHospital2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012170925159_Foto.cs" />
+    <Compile Include="Migrations\202012170925159_Foto.Designer.cs">
+      <DependentUpon>202012170925159_Foto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Actividad.cs" />
@@ -491,6 +495,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012160505383_StartHospital2.resx">
       <DependentUpon>202012160505383_StartHospital2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012170925159_Foto.resx">
+      <DependentUpon>202012170925159_Foto.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
