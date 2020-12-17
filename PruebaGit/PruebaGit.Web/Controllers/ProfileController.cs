@@ -2,12 +2,13 @@
 using PruebaGit.Web.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
 
-namespace PruebaGit.Web.Controllers
+namespace PruebaGit.Web.Controllers { 
 public class ProfileController : Controller
 {
     readonly ApplicationDbContext db = new ApplicationDbContext();
@@ -58,4 +59,5 @@ public class ProfileController : Controller
         return RedirectToAction("Details");
     }
 
+}
 }
