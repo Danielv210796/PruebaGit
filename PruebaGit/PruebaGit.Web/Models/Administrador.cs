@@ -23,6 +23,7 @@ namespace PruebaGit.Web.Models
 
         [Display(Name = "Apellido Paterno")]
         public string APP { get; set; }
+        public string Foto { get; set; }
 
 
 
